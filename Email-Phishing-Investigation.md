@@ -1,21 +1,43 @@
-Email Phishing Investigation 
+## Phishing Email Investigation
 
-Today I solve A Email Phishing On Letsdefend Web 
+## 1. What Happened??
 
-Victim's Mail Was Got Leaked And He Got Mail From Paypal In German Language 
+A suspicious email was received by a user, Impersonating Paypal. Email was in German language And Was Manipulating user
 
-The File Was Named paypal.eml it was having (.eml) extension 
+## 2. Analysis Performed
 
-After seeing this i opened the file in notepad and got the backend process like html code receivers mail and senders mail etc
+File was present in "users/files/phisingemail/paypal.eml"
+File was in ".eml" extension so used notepad to view backend
+In notepad there was all backend of "paypal.eml" file info expect html code 
+Asked to create report on give questions like :- domain url, Return path, was domain suspicious
+The return path was:- "bounce@rjttznyzjjzydnillquh.designclub.uk.com"
+Domain url the link from where it came was :- "https://storage.googleapis.com"
+Later converted url into SHA-256 As asked to do in report 
+SHA-256 :- "13945ecc33afee74ac7f72e1d5bb73050894356c4bf63d02a1a53e76830567f5"
 
-So they were asking for retuen path email the email was:- bounce@rjttznyzjjzydnillquh.designclub.uk.com
+## 3. Evidence
 
-Domain Name URL Was :- storage.googleapis.com which i found in body tag in html code 
+Suspicious return path :-
+"bounce@rjttznyzjjzydnillquh.designclub.uk.com"
+Suspicious Email:- 
+"https://storage.googleapis.com"
+Email type:- 
+Phishing attemp impersonating paypal in German Language
 
-And the domain was suspicious
+## 4. Is it malicious??
 
-And later i found body SHA-256 of the domain :- https://storage.googleapis.com 
+**True Positive**
 
-And the email was phishing email 
+Imperonating Real brand paypal
+email was suspicious 
+user suspicious retuen path
 
-So like this i solved the lab by answring the questions 
+## 5. Recommended Action 
+
+User should block the sender 
+Do not interact with email
+should not click on any link 
+
+## 6. Conclusion
+
+The investigation was confirm email phishing, Impersonating Real world Brand Paypal.
